@@ -24,3 +24,18 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+    
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v1
+      with:
+        languages: java
+
+    # Here is where you build your code
+    - run: |
+        make bootstrap
+        make release
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v1
+      
