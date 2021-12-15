@@ -30,7 +30,7 @@ jobs:
       uses: github/codeql-action/init@v1
       with:
         languages: java
-        token: ${{ secrets.ORG_PAT }}
+        token: ${{ secrets.MY_PAT }}
 
     # Here is where you build your code
     - run: |
