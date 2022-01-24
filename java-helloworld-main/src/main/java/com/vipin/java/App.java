@@ -11,5 +11,6 @@ public class App
         String password = "this is my password";
         System.out.println( "Password is!= " + password);
         System.out.println( "Hello World!" );
+        throw new ArithmeticException("/ by zero");
     }
 }
