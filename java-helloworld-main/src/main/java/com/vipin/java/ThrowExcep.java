@@ -1,5 +1,12 @@
+package com.vipin.java;
+
 class ThrowExcep
 {
+    public Map configMap;
+    public Map getConfigMap() {
+    if (configMap == null) {
+    return new HashMap();
+  }
     static void fun()
     {
         try
